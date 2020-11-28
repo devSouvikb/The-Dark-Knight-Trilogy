@@ -4,7 +4,7 @@ Hey! Welcome to my Quiz Game "**The Dark Knight Trilogy**".
 
 It's a JavaScript CLI app hosted on repl.it. I have build it while learning web dev with [neoGcamp](https://neog.camp/)
 
-## Topic
+## 📋 Topic
 
 This CLI game is based on Christopher Nolan's _Batman Begins_, _The Dark Knight_ and _The Dark Knight Rises_ collectively known as "**The Dark Knight Trilogy**"
 
@@ -18,13 +18,13 @@ This CLI game is based on Christopher Nolan's _Batman Begins_, _The Dark Knight_
 
 I have used `readlineSync()` as a dependency to take user input and [CHALK](https://www.npmjs.com/package/chalk) to beautify the app.
 
-## Play it here :
+## 🎮 Play it here :
 
 [The Dark Knight Trilogy](https://repl.it/@SouvikBiswas1/TheDarkKnightTrilogyQuiz?embed=1&output=1#index.js)
 
-## Screenshots
+## 📸 Screenshots
 
-<img src="img/TDKT-L1.jpg" width="300" height="1800"/>
+<img align = "left" src="img/TDKT-L1.jpg" width="300" height="1800"/>
 
 <img src="img/TDKT-L2.jpg" width="300" height="1200"/>
 
