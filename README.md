@@ -17,3 +17,7 @@ This CLI game is based on Christopher Nolan's _Batman Begins_, _The Dark Knight_
 - **Level 3** consist of 5 question each carries 4 marks and -2 negative marking.
 
 I have used `readlineSync()` as a dependency to take user input and [CHALK](https://www.npmjs.com/package/chalk) to beautify the app.
+
+## Play it here :
+
+[The Dark Knight Trilogy](https://repl.it/@SouvikBiswas1/TheDarkKnightTrilogyQuiz?embed=1&output=1#index.js)
