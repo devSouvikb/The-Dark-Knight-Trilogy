@@ -20,6 +20,38 @@ if (readlineSync.keyInYN(`\nLets Play! Level 1  ${playerName} `)) {
 
 var score = 0;
 
+var leaderBoard = [
+  {
+    name: "Souvik",
+    score: 50,
+  },
+
+  {
+    name: "Mahir",
+    score: 42,
+  },
+
+  {
+    name: "Rajdeep",
+    score: 38,
+  },
+
+  {
+    name: "Subham",
+    score: 35,
+  },
+
+  {
+    name: "Pradeep",
+    score: 27,
+  },
+
+  {
+    name: "Rahul",
+    score: 19,
+  },
+];
+
 console.log("\nPlease! select correct option between 1 - 4");
 
 var levelOneQues = [
