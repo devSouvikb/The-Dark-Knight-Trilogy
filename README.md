@@ -21,3 +21,11 @@ I have used `readlineSync()` as a dependency to take user input and [CHALK](http
 ## Play it here :
 
 [The Dark Knight Trilogy](https://repl.it/@SouvikBiswas1/TheDarkKnightTrilogyQuiz?embed=1&output=1#index.js)
+
+## Screenshots
+
+<img src="img/TDKT-L1.jpg" width="300" height="1800"/>
+
+<img src="img/TDKT-L2.jpg" width="300" height="1200"/>
+
+<img src="img/TDKT-L3.jpg" width="300" height="1200"/>
