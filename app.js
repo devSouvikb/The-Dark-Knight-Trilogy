@@ -12,6 +12,12 @@ console.log(
   `\n${"Rules:-"}\n\n${"The Game is divided into 3 levels"}\n\n${"Level 1 :-"}\n1. Total number of questions => 10\n2. Each correct answer => 2 points\n3. No negative marking for incorrect answers\n${"=> You have to give atleast 6 correct answers to go to level 2"}`
 );
 
+if (readlineSync.keyInYN(`\nLets Play! Level 1  ${playerName} `)) {
+} else {
+  console.log("\nOh no!! You exit from the Game");
+  process.exit();
+}
+
 var score = 0;
 
 console.log("\nPlease! select correct option between 1 - 4");
