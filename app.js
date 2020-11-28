@@ -216,6 +216,98 @@ if (score >= 12) {
   } else if (scoreTwo === 10) {
     console.log("\n\nCongrats!! You are qualified for Level 3");
   }
+
+  if (scoreTwo === 10) {
+    console.log(
+      `\n\n${"Level 3 :-"}\n1. Total number of questions => 5\n2. Each correct answer => 4 points\n3. Negative marking for incorrect answers => -2`
+    );
+
+    if (readlineSync.keyInYN(`\nLets Play! Level 3  ${playerName} `)) {
+    } else {
+      console.log("\nOh no!! The Game Ended");
+
+      for (let i = 0; i < leaderBoard.length; i++) {
+        if (leaderBoard[i].score < scoreTwo + score) {
+          console.log(`\nCongrats! ${playerName} you have broken records`);
+          break;
+        }
+      }
+
+      console.log(
+        `\n${"=>>"} Please sent a screenshort of your score, so that I can update the LeaderBoard.`
+      );
+
+      console.log(`\n\nThanks for playing ${playerName} Hope you enjoyed!!!`);
+
+      process.exit();
+    }
+
+    var levelThreeQues = [
+      {
+        array: ["Parsi", "Moroccan Arabic", "Urdu", "Frictional Language"],
+        question: "Q.1 What is the language of the prison inmates in the pit? ",
+        answer: "Moroccan Arabic",
+      },
+
+      {
+        array: ["Joe Chill", "Damon Caro", "Carmine Falcone", "Jack Napier"],
+        question: "Q.2 Who robbed Bruce Wayne's parents? ",
+        answer: "Joe Chill",
+      },
+
+      {
+        array: ["Gambo", "Gambit", "Gabbrit", "Gambol"],
+        question:
+          "Q.3 What's The Name Of The Mobster That The Joker Killed In The Dark Knight? ",
+        answer: "Gambol",
+      },
+
+      {
+        array: ["Alfred Pennyworth", "Jim Gordon", "Lucius Fox", "Two Face"],
+        question:
+          "Q.4 In All Three Movies, Which Character Is The Last Person To Speak To Batman? ",
+        answer: "Jim Gordon",
+      },
+
+      {
+        array: ["Paris", "Venice", "Florence", "Milan"],
+        question: `Q.5 Where did Bruce was Seen Last Time in "The Dark Khight Rises"?  `,
+        answer: "Florence",
+      },
+    ];
+
+    var play = (question, array, answer) => {
+      var playerAnswer = readlineSync.keyInSelect(array, question);
+      console.log("\n");
+      if (array[playerAnswer] === answer) {
+        console.log("Congrats!! You are Correct");
+        scoreTwo = scoreTwo + 4;
+      } else {
+        console.log("Oops!! You are Wrong");
+        console.log("The correct answer is : ", answer);
+        scoreTwo = scoreTwo - 2;
+      }
+      console.log(`Current score is: ${scoreTwo + score} `);
+      console.log("\n       ***********");
+    };
+
+    for (i = 0; i < levelThreeQues.length; i++) {
+      currentQues = levelThreeQues[i];
+      play(currentQues.question, currentQues.array, currentQues.answer);
+    }
+
+    console.log("\nYour final score is: " + scoreTwo + score);
+
+    if (scoreTwo + score === 50) {
+      console.log(
+        "\nWow!! You have answered all correct\nYou are a true Batman fan"
+      );
+    }
+  } else {
+    console.log(
+      "\nOh no!! You havn't answered all questions correct\nSorry! you can't get into level 3"
+    );
+  }
 } else {
   console.log(
     "\nOh no!! You havn't answered 6 questions correct\nSorry! you can't get into level 2"
