@@ -122,4 +122,104 @@ if (score === 20) {
   console.log("\n\nCongrats!! You are qualified for Level 2");
 }
 
+var scoreTwo = 0;
+
+if (score >= 12) {
+  console.log(
+    `\n\n${"Level 2 :-"}\n1. Total number of questions => 5\n2. Each correct answer => 2 points\n3. Negative marking for incorrect answers => -1\n${"=> You have to give all correct answers to go to level 3"}`
+  );
+
+  if (readlineSync.keyInYN(`\nLets Play! Level 2  ${playerName} `)) {
+  } else {
+    console.log("\n Oh no!! The Game Ended");
+
+    for (let i = 0; i < leaderBoard.length; i++) {
+      if (leaderBoard[i].score < score) {
+        console.log(`\nCongrats! ${playerName} you have broken records`);
+        break;
+      }
+    }
+
+    console.log(
+      `\n${"=>>"} Please sent a screenshort of your score, so that I can update the LeaderBoard.`
+    );
+
+    console.log(`\n\nThanks for playing ${playerName}Hope you enjoyed!!!`);
+    process.exit();
+  }
+
+  var levelTwoQues = [
+    {
+      array: ["both 7", "8 and 9", "both 8", "7 and 9"],
+      question:
+        "Q.1 How Old Were Rachel Dawes And Bruce Wayne When Bruce Fell In The Well? ",
+      answer: "both 8",
+    },
+
+    {
+      array: ["Museum", "Orphanage home", "Art Gallery", "Opera Hall"],
+      question: "Q.2 What was the wayne mansion taken use for at the end? ",
+      answer: "Orphanage home",
+    },
+
+    {
+      array: ["Bucky", "Bonny", "Bane", "Robin"],
+      question: "Q.3 What is John Blake's real name? ",
+      answer: "Robin",
+    },
+
+    {
+      array: ["Ras Al Ghul", "Scarecrow", "Falcone", "Two Face"],
+      question: "Q.4 Which Villain Has Appeared In Each Film? ",
+      answer: "Scarecrow",
+    },
+
+    {
+      array: [
+        "Gotham Rogues",
+        "Gotham Riders",
+        "Gotham League",
+        "Gotham Knights",
+      ],
+      question: "Q.5 What is the name of Gotham’s football team? ",
+      answer: "Gotham Rogues",
+    },
+  ];
+
+  var play = (question, array, answer) => {
+    var playerAnswer = readlineSync.keyInSelect(array, question);
+    console.log("\n");
+    if (array[playerAnswer] === answer) {
+      console.log("Congrats!! You are Correct");
+      scoreTwo = scoreTwo + 2;
+    } else {
+      console.log("Oops!! You are Wrong");
+      console.log("The correct answer is : ", answer);
+      scoreTwo = scoreTwo - 1;
+    }
+    console.log(`Current score is: ${scoreTwo + score} `);
+    console.log("\n       ***********");
+  };
+
+  for (i = 0; i < levelTwoQues.length; i++) {
+    currentQues = levelTwoQues[i];
+    play(currentQues.question, currentQues.array, currentQues.answer);
+  }
+
+  console.log("\nYour final score is: " + scoreTwo + score);
+
+  if (scoreTwo + score === 30) {
+    console.log(
+      "\nWow!! You have answered all correct\nYou are a true Batman fan"
+    );
+    console.log("\n\nCongrats!! You are qualified for Level 3");
+  } else if (scoreTwo === 10) {
+    console.log("\n\nCongrats!! You are qualified for Level 3");
+  }
+} else {
+  console.log(
+    "\nOh no!! You havn't answered 6 questions correct\nSorry! you can't get into level 2"
+  );
+}
+
 console.log(`\n\nThanks for playing ${playerName} Hope you enjoyed!!!`);
