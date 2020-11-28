@@ -346,4 +346,15 @@ if (score >= 12) {
   );
 }
 
+for (let i = 0; i < leaderBoard.length; i++) {
+  if (leaderBoard[i].score < scoreTwo + score) {
+    console.log(`\nCongrats! ${playerName} you have broken records`);
+    break;
+  }
+}
+
+console.log(
+  `\n${"=>>"} Please sent a screenshort of your score, so that I can update the LeaderBoard.`
+);
+
 console.log(`\n\nThanks for playing ${playerName} Hope you enjoyed!!!`);
